@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inc/Dec counter</title>
+    <title> Dice Roller</title>
+    <style>
+        .img-dice{
+            height: 250px;
+        }
+        .roll{
+            height: 20px;
+            width: 80px;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .roll:hover{
+            background-color: aqua;
+            border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
     <div>
         <img src="dice.png" class="img-dice" id="img-dice"/>
 
-        <button onclick="roll()">Roll</button>
+        <button class="roll" onclick="roll()">Roll</button>
     </div>
 </body>
 </html>

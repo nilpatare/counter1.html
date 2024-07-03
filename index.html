@@ -6,11 +6,12 @@
     <title> Dice Roller</title>
     <style>
         .img-dice{
-            height: 250px;
+            height: 200px;
         }
         .roll{
             height: 20px;
             width: 80px;
+            align-items: center;
             border-radius: 5px;
             border: 1px solid black;
             cursor: pointer;
@@ -27,5 +28,32 @@
 
         <button class="roll" onclick="roll()">Roll</button>
     </div>
+    <script>
+        function roll(){
+            const randomNumber = Math.floor(Math.random()*(7-1)) + 1
+            const imgElement = document.getElementById("img-dice")
+
+            switch(randomNumber){
+                case 1:
+                    imgElement.src = "dice 1.png"
+                break
+                case 2:
+                    imgElement.src = "dice 2.png"
+                break
+                case 3:
+                    imgElement.src = "dice 3.png"
+                break
+                case 4:
+                    imgElement.src = "dice 4.png"
+                break
+                case 5:
+                    imgElement.src = "dice 5.png"
+                break
+                case 6:
+                    imgElement.src = "dice 6.png"
+                break
+            }
+        }
+    </script>
 </body>
 </html>

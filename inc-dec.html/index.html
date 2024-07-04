@@ -55,14 +55,33 @@
 
         <div class="btn-container">
     
-        <img src="minus.png" class="quantity">
+        <img src="minus.png" class="quantity" onclick="dec()">
             
         <span class="quantity-text" id="quantity-text">1</span>
 
-        <img src="add.png" class="quantity">
+        <img src="add.png" class="quantity" onclick="inc()">
     </div>
 
-    <button class="btn-buy-now"> Buy Now</button>
+    <button class="btn-buy-now">Buy Now</button>
     </div>
+
+    <script>
+      
+        function inc(){
+            const quantityElement = document.getElementById('quantity-text')
+
+            let quantity = parseInt (quantityElement.innerText);
+
+            quantityElement.innerText = ++quantity;
+        }
+
+        function dec(){
+            const quantityElement = document.getElementById('quantity-text')
+
+            let quantity = parseInt (quantityElement.innerText);
+
+            quantityElement.innerText = --quantity;
+        }
+    </script>
 </body>
 </html>
